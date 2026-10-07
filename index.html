@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gaming gadgets on rent in Bangalore — a SharePal-inspired frontend recreation." />
+  <title>Gaming Gadgets on Rent | SharePal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="top-strip">
+    <span>Rent more. Own less.</span>
+    <span>Zero security deposit&nbsp; • &nbsp;Free delivery</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="SharePal home">
+      <span class="brand-mark">S</span>
+      <span>share<span>pal</span></span>
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="#products">Gaming</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#faq">FAQs</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="location-btn" id="locationBtn" type="button">📍 Bangalore</button>
+      <button class="icon-btn" id="wishlistBtn" type="button" aria-label="Wishlist">♡</button>
+      <button class="icon-btn" id="cartBtn" type="button" aria-label="Cart">🛒<span class="cart-count" id="cartCount">0</span></button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="crumbs"><a href="#">Home</a><span>/</span><a href="#">Gaming</a><span>/</span><strong>Gaming gadgets on rent</strong></div>
+        <div class="hero-copy">
+          <div>
+            <p class="eyebrow">Bangalore · Gaming</p>
+            <h1>Gaming Gadgets <span>on Rent</span></h1>
+            <p class="hero-subtitle">Rent PS5, Xbox, VR, racing wheels and more. Play more without the cost of owning.</p>
+          </div>
+          <div class="date-card" id="dateCard">
+            <div>
+              <span class="date-label">Select rental dates</span>
+              <strong id="dateSummary">Choose dates to see prices</strong>
+            </div>
+            <button class="primary-btn" id="dateBtn" type="button">Select Dates <span>→</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="category-section">
+      <div class="section-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Gaming Consoles</p>
+            <h2>Pick your way to play</h2>
+          </div>
+          <span class="result-count" id="resultCount">23 items</span>
+        </div>
+        <div class="category-tabs" id="categoryTabs">
+          <button class="category-tab active" data-filter="all">All</button>
+          <button class="category-tab" data-filter="PS5">PS5 Console</button>
+          <button class="category-tab" data-filter="Xbox">Xbox Console</button>
+          <button class="category-tab" data-filter="VR">VR</button>
+          <button class="category-tab" data-filter="Big Screen">Big Screen Gaming</button>
+          <button class="category-tab" data-filter="Racing">Racing Wheel</button>
+          <button class="category-tab" data-filter="Games">PS5 Games</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-shell">
+        <div class="toolbar">
+          <div>
+            <h2 id="listingTitle">Gaming gadgets on rent</h2>
+            <p id="listingSub">Hand-picked consoles and gaming bundles for your next session.</p>
+          </div>
+          <div class="toolbar-actions">
+            <label class="search-box">
+              <span>⌕</span>
+              <input id="searchInput" type="search" placeholder="Search gaming gear..." />
+            </label>
+            <select id="sortSelect" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: low to high</option>
+              <option value="price-high">Price: high to low</option>
+              <option value="rating">Top rated</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <div class="empty-icon">🎮</div>
+          <h3>No products found</h3>
+          <p>Try another category or search term.</p>
+          <button class="secondary-btn" id="clearFilters" type="button">Clear filters</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-section" id="how-it-works">
+      <div class="section-shell">
+        <div class="trust-head">
+          <p class="eyebrow">Why SharePal</p>
+          <h2>Rent with peace</h2>
+          <p>Everything you need for a smooth gaming weekend, without the ownership headache.</p>
+        </div>
+        <div class="trust-grid">
+          <article class="trust-card"><div class="trust-icon">✓</div><h3>Zero security deposit</h3><p>No big upfront deposit. What you see is what you pay.</p></article>
+          <article class="trust-card"><div class="trust-icon">↗</div><h3>Free delivery</h3><p>Get your gear delivered to your doorstep in Bangalore.</p></article>
+          <article class="trust-card"><div class="trust-icon">⌁</div><h3>12-point quality check</h3><p>Every product is checked before it heads your way.</p></article>
+          <article class="trust-card"><div class="trust-icon">₹</div><h3>Lowest price guarantee</h3><p>Premium gaming gear at rental prices that make sense.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="section-shell stats-grid">
+        <div><strong>250Cr+</strong><span>Saved Together</span></div>
+        <div><strong>4.5M Kg</strong><span>CO₂e Emissions Saved</span></div>
+        <div><strong>100K+</strong><span>Products in Circulation</span></div>
+      </div>
+    </section>
+
+    <section class="reviews-section">
+      <div class="section-shell">
+        <div class="section-heading">
+          <div><p class="eyebrow">Loved by renters</p><h2>What our pals say</h2></div>
+          <div class="review-controls"><button id="reviewPrev" type="button">←</button><button id="reviewNext" type="button">→</button></div>
+        </div>
+        <div class="review-track" id="reviewTrack"></div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="section-shell faq-layout">
+        <div>
+          <p class="eyebrow">Need to know</p>
+          <h2>Frequently Asked Questions</h2>
+          <p class="faq-intro">A few simple answers before you start your gaming weekend.</p>
+        </div>
+        <div class="faq-list" id="faqList"></div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="section-shell cta-inner">
+        <div><p class="eyebrow">Ready when you are</p><h2>Own the experience.<br>Rent the gear.</h2></div>
+        <button class="primary-btn light" id="ctaBtn" type="button">Browse gaming gear <span>→</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="section-shell footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#"><span class="brand-mark">S</span><span>share<span>pal</span></span></a>
+        <p>Experience more, buy less.</p>
+      </div>
+      <div><h4>Explore</h4><a href="#products">Gaming</a><a href="#how-it-works">How it works</a><a href="#faq">FAQs</a></div>
+      <div><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Partner program</a></div>
+      <div><h4>Need help?</h4><a href="tel:+917619220543">+91 76192 20543</a><a href="mailto:care@sharepal.in">care@sharepal.in</a><span>10 AM – 10 PM</span></div>
+    </div>
+    <div class="footer-bottom section-shell"><span>© 2026 SharePal-inspired assignment recreation</span><span>Built for frontend evaluation</span></div>
+  </footer>
+
+  <div class="modal-backdrop" id="dateModal" hidden>
+    <div class="modal">
+      <button class="modal-close" data-close="dateModal" type="button">×</button>
+      <p class="eyebrow">Rental dates</p>
+      <h2>When are you playing?</h2>
+      <p class="modal-copy">Pick your start and end dates. Rental pricing will update once both are selected.</p>
+      <div class="date-inputs">
+        <label>Start date<input id="startDate" type="date"></label>
+        <label>End date<input id="endDate" type="date"></label>
+      </div>
+      <button class="primary-btn full" id="saveDates" type="button">Save rental dates</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="./products.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
